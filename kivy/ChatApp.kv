@@ -1,0 +1,25 @@
+#:kivy 2.0.0
+
+<RegisterScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 10
+        spacing: 10
+        TextInput:
+            id: username
+            hint_text: '用戶名'
+        TextInput:
+            id: password
+            hint_text: '密碼'
+            password: True
+        Button:
+            text: '註冊'
+            on_press: root.register_user()
+
+<ChatApp>:
+    ScreenManager:
+        id: screen_manager
+        RegisterScreen:
+            name: 'register'
+        # 添加更多的 Screen 到這裡，例如 ChatScreen 等
+
